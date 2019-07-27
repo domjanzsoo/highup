@@ -1,0 +1,209 @@
+html,body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+/*Main blog page styling */
+
+.blogg-title{
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-top:50px;
+
+}
+.sectionTitle{
+	color:#d96b04;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.middle{
+	display:block;
+	margin:5px auto;
+	width:50%;
+	height:auto;
+}
+.middle-full-width{
+	display:block;
+	margin:10px 0px 10px 0px;
+	width:100%;
+	height:auto;
+}
+
+.left{
+	position:relative;
+	width:50%;
+	height:auto;
+	float:left;
+	clear:right;
+	margin:10px 10px 10px 0px;
+	
+}
+
+.right{
+	position:relative;
+	width:50%;
+	height:auto;
+	float:right;
+	clear:left;
+	margin:10px 0px 10px 10px;
+}
+
+
+.blogginfo{
+	display:block;
+	position:absolute;
+	right:20px;
+	top:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+
+ul#blogs{
+	display:block;
+	position:absolute;
+	top:30px;
+	right:30px;
+	list-style:none;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#listContainer{
+	overflow:hidden;
+}
+
+ul#insidelist{
+	height:100px;
+	overflow:hidden;
+	transition:margin 0.4s ease;
+	-moz-transition:margin 0.4s ease;
+	-webkit-transition:margin 0.4s ease;
+	list-style:none;
+	text-align:center;
+	width:100%;
+	margin-top:-100px;
+	padding:0;
+
+}
+
+li.listClicked  ul#insidelist{
+	
+	margin-top:0px;
+	
+}
+
+li.bloglink a{
+	text-decoration:none;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#999ea8;
+
+
+}
+
+li.bloglink a:hover{
+	color:black;
+}
+
+li#listheader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	padding-bottom:3px;
+	text-align:center;
+	color:#999ea8;
+	border-bottom:1px inset #999ea8;
+}
+
+li#listheader:hover{
+	color:black;
+}
+
+#blogtopics{
+	
+	display:flex;
+	flex-direction:row;
+	position:relative;
+	margin-top:160px;
+	width:90%;	
+	justify-content:space-around;
+	
+}
+#main{
+	display:block;
+	width:100%;
+	min-height:100%;
+	
+}
+
+.flex-container{
+	display:flex;
+	justify-content:center;
+}
+.topic{
+	width:250px;
+	height:200px;
+
+}	
+.descsection{
+	display:block;
+	width:100%;
+	height:100%;	
+	text-align:justify;
+	text-justify:auto;
+	padding-left:10px;
+	border-left:1px inset #999ea8;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	
+}
+.topic h2{
+	width:100%;
+	text-align:center;
+	font-family:'Poiret One','Arial',Helvetica,sans-serif;
+	font-weight:bold;
+
+}
+
+/*End of main blog page styling */
+
+#logoabsolut{
+	display:block;
+	position:absolute;
+	left:30px;
+	top:20px;
+	z-index:999;
+
+}
+
+
+
+.logoabsolute{
+	
+	
+	width:55px;
+	height:55px;
+	
+}
+
+
+
+.bloggcontent{
+	display:block;
+	width:70%;
+	height:auto;
+	position:relative;
+	margin:130px auto;
+	text-align:justify;
+	text-justify:auto;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+#blogcontainer{
+	display:block;
+	position:relative;
+	width:100%;
+	height:100%;
+
+}

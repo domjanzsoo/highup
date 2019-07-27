@@ -1,0 +1,26 @@
+{
+  "name": "highup",
+  "version": "1.0.0",
+  "description": "Personal/professional website of Carol Zsolt Domjan ",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "web-development",
+    "front-ent",
+    "junior-web-developer",
+    "motivation"
+  ],
+  "author": "Carol-Zsolt Domjan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-validator": "^6.0.0",
+    "git": "^0.1.5",
+    "nodemailer": "^6.2.1",
+    "nodemon": "^1.19.1"
+  }
+}

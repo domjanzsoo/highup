@@ -1,0 +1,44 @@
+
+	<ul id="blogs">
+	<li id='listheader'>Recent blogs</li>
+	<li id="listContainer"><ul id="insidelist">
+	{{#each bloggPages}}
+	<li class='bloglink'><a href="/blog/{{this.id}}">{{this.title}}</a></li>
+	{{/each}}
+	</ul>
+	</li>
+	</ul>
+	<div id="blogtopics">
+	<div class="topic" id="journey-of-a-new-profession">
+	<h2 id="profesional-journey-title">Professional Journey</h2>
+	<div class="descsection" id="professional-section-journey-described">
+	<p>After long years of frustration and struggle I found my path at the age of 30 .After the following 3 years of hard work and constant studying I'd become confident enough to make drastic changes in my life. This topic is not just for web-developer, but for everybody who seeks for that right special place where he/she belongs.</p>
+	</div>
+	</div>
+	<div class="topic" id="front-end-development">
+	<h2 id="front-end-title">Front-End</h2>
+	<div class="descsection" id="front-end-section-described">
+	<p> Front-End is what makes the first impact on the user of your website. When I started to invest more time in studying front-end, my imagination was, that knowing a few types of layouts, getting some knowledge of flex boxes, positioning and adding some dinamysm by javascript does the job. Soon I realised, it doesn't .We have to make the user of our platforms happy, without loosing any possible benefit of that users activity.  </p>
+	</div>
+	</div>
+	<div class="topic" id="back-end-development">
+	<h2 id="back-end-title">Back-End</h2>
+	<div class="descsection" id="back-end-section-described">
+	<p>During the last couple of years I've got many project ideas waiting to become reality. In order to achieve this in the future, I keep rethinking over and over the best possible back-end approach based on my knowledge. It's obvious, the more I learn, the boundaries are more enlarged. This is a wonderful feeling, and it gives that extra push to go forward, even if everything is just in my head still.</p>
+	</div>
+	</div>
+	<div class="topic" id="creativity-explored">
+	<h2 id="creativity-explored-title">Creativity Explored</h2>
+	<div class="descsection" id="creativity-explored-section-described">
+	This is that topic, which is not strictly related to coding, but suggests creative solutions for projects on the web. I hope to meet as many situations and project as possible, and to extract something from each of them. If that happens, I would be too selfish to not share it with the world.
+	</div>
+	</div>
+	</div>
+
+	
+	{{!--<div class="fb-comments" data-href="http://localhost:3000/testblog" data-width="120" data-numposts="5"></div>
+	
+    <div id="fb-root"></div>--}}
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v3.3&appId=191136778499210&autoLogAppEvents=1"></script>
+  

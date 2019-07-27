@@ -1,0 +1,52 @@
+body{
+	margin:0;
+	padding:0;
+	}
+	
+	
+	#pageContainer{
+	
+	display:block;
+	position:relative;
+	overflow: hidden; 
+	width:400px;
+	margin:100px auto;
+	height:100%;
+
+	
+	
+	}
+	
+	.inputgroup{
+	
+	display:flex;
+	width:100%
+	flex-direction:row;
+	margin-bottom:20px;
+	padding-bottom:5px;
+
+	
+	}
+	
+	.label{
+	flex:1;
+	font-family: 'Poiret One', cursive;
+	font-weight:bold;
+	}
+	
+	input[type=submit]{
+		width:20em;
+		height:2em;
+		border:none;
+		font-weight:bold;
+	}
+	.input{
+	
+	flex:1;
+	}
+	
+	#serverresponse{
+		display:block;
+		margin-bottom:20px;
+		color:#11822d;
+	}
