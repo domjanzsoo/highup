@@ -7,13 +7,11 @@ function submit(e){
 	e.preventDefault();
 	if(buttonClicked==false){
 	buttonClicked=true;
-	let fname=document.getElementById('fname').value;
-	let lname=document.getElementById('lname').value;
+	let fname=document.getElementById('fullname').value;
 	let emailaddress=document.getElementById('email').value;
 	let message=document.getElementById('message').value;
 	let contactObject={
-		firstname:fname,
-		lastname:lname,
+		fullname:fname,
 		email:emailaddress,
 		msg:message
 	};

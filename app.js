@@ -90,35 +90,34 @@ app.post('/contactmsg',validator.myValidator,(req,res)=>{
 		errorToSend=validError.array()[0].msg;
 		res.json({errorMsg:errorToSend});
 	}else{
-	var firstName=req.body.firstname;
-	var lastName=req.body.lastname;
+	var fullName=req.body.fullname;
 	var email=req.body.email;
 	var msg=req.body.msg;
-	console.log('Contact message is processed.Message from '+firstName+' '+lastName+' .Emails address: '+email);
+	console.log('Contact message is processed.Message from '+fullName+' .Emails address: '+email);
 	var transporter=nodemailer.createTransport({
 		host:'mail.supaidea.com',
 		port:25,
 		auth:{
-			user:'zsolt_domjan@supaidea.com',
-			pass:'Jelszo99!'
+			user:'postmaster@supaidea.com',
+			pass:'Jelszo-99'
 		},
 		secure:false,
 		tls: {rejectUnauthorized: false},
 	});
 	
 	var mailOptionsConfirm={
-		from:'zsolt_domjan@supaidea.com',
+		from:'postmaster@supaidea.com',
 		to:email,
 		subject:'Thank you for your message',
 		text:'Thanks for contacting me. I will get back to you asap.'
 	};
 	
 	var mailOptionsInform={
-		from:'zsolt_domjan@supaidea.com',
+		from:'postmaster@supaidea.com',
 		to:'domjanzsoo@yahoo.com',
 		subject:'New message from hoptopit',
-		text:'You received a message from '+firstName+' '+lastName+'.Check it out.',
-		html:htmlemail.htmlAdmin(firstName,lastName,email,msg)
+		text:'You received a message from '+fullName+'.Check it out.',
+		html:htmlemail.htmlAdmin(fullName,email,msg)
 	};
 	
 	transporter.sendMail(mailOptionsConfirm,function(error,info){
