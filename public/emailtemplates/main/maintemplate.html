@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>General email template</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+<style>
+@font-face{
+font-family:tomatoes;
+src:url(Tomatoes.ttf);
+}
+#applogo{
+width:90px;
+height:auto;
+}
+#quote{
+font-family:tomatoes;
+font-size:18px;
+text-align:center;
+font-weight:bold;
+color:#bf1704;
+
+}
+ul#links{
+list-style:none;
+}
+
+li.linkelement{
+display:flex;
+margin-bottom:5px;
+}
+
+a.link{
+font-family:arial,'sans-serif';
+font-size:13px;
+font-weight:bold;
+margin-left:8px;
+margin-top:3px;
+
+}
+a.link:hover{
+
+color:#bf1704;
+}
+.linkimg{
+width:25px;
+height:auto;
+}
+
+#emailcontent{
+padding-top:70px;
+margin-bottom:150px;
+}
+</style>
+</head>
+<body>
+<div id="emailcontent">
+Dear Zsolt,
+</br>
+<p>You received and email from {{sendername}} having the email address: {{senderemail}}</p>
+<p>See the message received below:</p>
+<p>{{message}}</p>
+
+</div>
+<table id="content-table">
+<tr>
+<td>
+<img class="footerimg" id="applogo" src="http://159.65.208.124:3000/img/logo/newlogo.png" >
+</td>
+<td>
+<span id="quote">
+"Things don't have to change the world to be important."   (Steve Jobs)
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<ul id="links">
+<li class="linkelement" id="facebook">
+<img class="linkimg" src="http://159.65.208.124:3000/img/footerarrows/facebook.png">
+<a class="link" id="fbook">facebook</a>
+</li>
+<li class="linkelement" id="twitter">
+<img class="linkimg" src="http://159.65.208.124:3000/img/footerarrows/twitter.png">
+<a class="link" id="twit">twitter</a>
+</li>
+<li class="linkelement" id="googleplus">
+<img class="linkimg" src="http://159.65.208.124:3000/img/footerarrows/googleplus.png">
+<a class="link" id="google+">google+</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

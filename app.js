@@ -5,13 +5,26 @@ var exphbs=require('express-handlebars');
 var path=require('path');
 var nodemailer=require('nodemailer');
 var bodyParser=require('body-parser');
-
+var hbsmailer=require('nodemailer-express-handlebars');
 let validator=require('./validation.js');
 let htmlemail=require('./htmlemailformatter.js');
+let emailTemplates=require('swig-email-templates');
+var templates=new emailTemplates();
 var app=express();
+
+
+/*var readHTMLFile=function(path,callback){
+	fs.readFile(path,{encoding:'utf-8'},function(err,html){
+		if(err){
+			throw err;
+			callback(err);
+		}else{
+			callback(null,html);
+		}
+	});
+};*/
 app.set('port',process.env.PORT||3000);
 app.use(express.static(__dirname+'/public'));
-
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.engine('handlebars',exphbs());
@@ -104,7 +117,7 @@ app.post('/contactmsg',validator.myValidator,(req,res)=>{
 		secure:false,
 		tls: {rejectUnauthorized: false},
 	});
-	
+
 	var mailOptionsConfirm={
 		from:'postmaster@supaidea.com',
 		to:email,
@@ -112,13 +125,40 @@ app.post('/contactmsg',validator.myValidator,(req,res)=>{
 		text:'Thanks for contacting me. I will get back to you asap.'
 	};
 	
-	var mailOptionsInform={
+		
+
+	
+	var context={
+			sendername:fullName,
+			senderemail:email,
+			message:msg
+		};
+	templates.render(__dirname+'/public/emailtemplates/main/maintemplate.html',context,function(err,html,text,subj){
+		
+					
+		let mailOptionsInform={
 		from:'postmaster@supaidea.com',
-		to:'domjanzsoo@yahoo.com',
-		subject:'New message from hoptopit',
-		text:'You received a message from '+fullName+'.Check it out.',
-		html:htmlemail.htmlAdmin(fullName,email,msg)
-	};
+		to:email,
+		subject:'Thank you for contacting me',
+		html:html,
+		text:text
+		};
+		
+	transporter.sendMail(mailOptionsInform,function(error,info){
+			
+		
+		if(error){
+			console.log(error);
+		}else{
+			console.log('Email sent');
+			res.json({msg:'Message sent successfully'});
+		}
+	});
+	});
+	/*readHTMLFile(__dirname+'/public/emailtemplates/main/maintemplate.html',function(err,html){
+		var template=exphbs.compile(html);
+		
+
 	
 	transporter.sendMail(mailOptionsConfirm,function(error,info){
 		if(error){
@@ -129,7 +169,10 @@ app.post('/contactmsg',validator.myValidator,(req,res)=>{
 		}
 	
 	});
-	transporter.sendMail(mailOptionsInform,function(error,info){
+	});*/
+	
+
+	/*transporter.sendMail(mailOptionsInform,function(error,info){
 		if(error){
 			console.log(error);
 		}else{
@@ -138,10 +181,10 @@ app.post('/contactmsg',validator.myValidator,(req,res)=>{
 		}
 		
 		
-	});
+	});*/
 	}
 	});
-
+	
 //custom 404 page
 app.use(function(req,res){
 	res.type('text/plain');
