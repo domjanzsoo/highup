@@ -12,20 +12,16 @@ let emailTemplates=require('swig-email-templates');
 var templates=new emailTemplates();
 var app=express();
 
-
-/*var readHTMLFile=function(path,callback){
-	fs.readFile(path,{encoding:'utf-8'},function(err,html){
-		if(err){
-			throw err;
-			callback(err);
-		}else{
-			callback(null,html);
-		}
-	});
-};*/
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.set('port',process.env.PORT||3000);
 app.use(express.static(__dirname+'/public'));
 app.use(bodyParser.urlencoded({extended:true}));
+
+
 
 app.engine('handlebars',exphbs());
 app.set('view engine','handlebars');
@@ -131,12 +127,13 @@ app.post('/contactmsg',validator.myValidator,(req,res)=>{
 	var context={
 			sendername:fullName,
 			senderemail:email,
-			message:msg
+			message:msg,
+			
 		};
 	templates.render(__dirname+'/public/emailtemplates/main/maintemplate.html',context,function(err,html,text,subj){
 		
 					
-		let mailOptionsInform={
+		let mailOptionsConfirm={
 		from:'postmaster@supaidea.com',
 		to:email,
 		subject:'Thank you for contacting me',
@@ -144,7 +141,7 @@ app.post('/contactmsg',validator.myValidator,(req,res)=>{
 		text:text
 		};
 		
-	transporter.sendMail(mailOptionsInform,function(error,info){
+	transporter.sendMail(mailOptionsConfirm,function(error,info){
 			
 		
 		if(error){

@@ -8,22 +8,26 @@
 <style>
 @font-face{
 font-family:tomatoes;
-src:url(Tomatoes.ttf);
+
+src:url('http://159.65.208.124:3000/fonts/tomatoes/Tomatoes.ttf') format('truetype');
 }
 #applogo{
 width:90px;
 height:auto;
+position:relative;
+margin-left:30px;
+margin-bottom:5px;
 }
 #quote{
 font-family:tomatoes;
 font-size:18px;
 text-align:center;
 font-weight:bold;
-color:#bf1704;
 
 }
 ul#links{
 list-style:none;
+
 }
 
 li.linkelement{
@@ -52,20 +56,29 @@ height:auto;
 padding-top:70px;
 margin-bottom:150px;
 }
+
+table#content-table{
+background-image:url('http://159.65.208.124:3000/img/menutexts/iebackground.png');
+background-size:contain;
+background-position:right;
+background-repeat:no-repeat;
+
+}
+
 </style>
 </head>
 <body>
 <div id="emailcontent">
-Dear Zsolt,
+Hi there,
 </br>
-<p>You received and email from {{sendername}} having the email address: {{senderemail}}</p>
-<p>See the message received below:</p>
+<p>Thank you for contacting, I will get back to you as soon as possible.</p>
+<p>You can see you emails sent to me below:</p>
 <p>{{message}}</p>
 
 </div>
 <table id="content-table">
 <tr>
-<td>
+<td class="first">
 <img class="footerimg" id="applogo" src="http://159.65.208.124:3000/img/logo/newlogo.png" >
 </td>
 <td>
@@ -75,7 +88,7 @@ Dear Zsolt,
 </td>
 </tr>
 <tr>
-<td>
+<td class="first">
 <ul id="links">
 <li class="linkelement" id="facebook">
 <img class="linkimg" src="http://159.65.208.124:3000/img/footerarrows/facebook.png">
