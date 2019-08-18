@@ -59,10 +59,28 @@ body{
 	display:block;
 	position:relative;
 	margin-top:10px;
-	width:100%;
+	width:90%;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size:13px;
 	text-align:justify;
 	text-justify:auto;
 	}
+	.downloadLink{
+		display:block;
+		position:absolute;
+		right:65px;
+		top:2px;
+		font-size:12px;
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+	.downloadLink a{
+		color:black;
+		text-decoration:none;
+		transition:0.4s ease;
+		-moz-transition:0.4s ease;
+		-webkit-transition:0.4s ease;
+	}
 	
+	.downloadLink a:hover{
+		color:#02acbf;
+	}

@@ -10,7 +10,14 @@ margin:0;
 padding:0;
 
 }
-
+#main{
+	display:block;
+	width:100%;
+	min-height:800px;
+	height:auto;
+	position:relative;
+	overflow:hidden;
+}
 #phonecontainer{
 	
 	display:block;
@@ -56,8 +63,8 @@ padding:0;
 img#logo{
 display:block;
 position:relative;
-width:60px;
-height:60px;
+width:120px;
+height:auto;
 margin:0 auto;
 min-width:40px;
 min-height:40px;
@@ -112,11 +119,14 @@ cursor:pointer;
 	vertical-align:top;
 	width:auto;
 	margin-left:5px;
-	padding-top:3px;
+	padding-top:1px;
+	font-size:3vw;
 }
 #foottable{
 	position:relative;
 	border-collapse:collapse;
+	width:60%;
+	margin:20px auto;
 }
 td.section{
 	width:150px;
@@ -132,21 +142,20 @@ h3{
 }
 .linksection{	
 
-	display:block;
-	width:50%;
-	position:relative;
-	margin:0px auto;
+	height:18px;
 	
 	
 }
 .linksection a{
-	font-size:10px;
+	display:inline-block;
+	position:relative;
+	margin-top:-6px;
 }
 
 .networklogo{
 	display:inline-block;
-	width:15px;
-	height:15px;
+	width:18px;
+	height:18px;
 	
 	
 }
@@ -354,7 +363,7 @@ span#name{
 	
 	flex:0 0 300px;
 	width:auto;
-	height:250px;
+	height:350px;
 	overflow:hidden;
 
 }
@@ -464,23 +473,10 @@ h3{
 	text-align:left;
 	font-family:Arial, Helvetica, sans-serif;
 }
-.linksection{	
 
-	display:block;
-	width:50%;
-	position:relative;
-	margin:0px auto;
-	
-	
-}
+.linksection a{
 
-
-.networklogo{
-	display:inline-block;
-	width:25px;
-	height:25px;
-	
-	
+	margin-top:14px;
 }
 
 #copyright{

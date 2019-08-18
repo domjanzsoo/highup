@@ -20,11 +20,10 @@ body{
 	.inputgroup{
 	
 	display:flex;
-	width:100%
+	width:70%;
 	flex-direction:row;
-	margin-bottom:20px;
+	margin-bottom:20px auto;
 	padding-bottom:5px;
-
 	
 	}
 	
@@ -42,7 +41,7 @@ body{
 	}
 	.input{
 	
-	flex:1;
+	flex:2;
 	}
 	
 	#serverresponse{

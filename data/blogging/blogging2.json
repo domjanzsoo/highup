@@ -5,7 +5,9 @@
 "templatename":"journeywebdevelopment",
 "date":"17/07/2019",
 "fb-api-key":"thisiskeynumber1",
-"subject":"professional-journey"
+"subject":"journey-of-a-new-profession",
+"topic":"Motivation/career",
+"read-duration":"7min"
 },
 "2":{
 "id":"000002",
@@ -13,7 +15,9 @@
 "templatename":"blogg2",
 "date":"25/06.2019",
 "fb-api-key":"thisiskeynumber2",
-"subject":"selfdiscipline"
+"subject":"front-end-development",
+"topic":"Front-en Developmentd ",
+"read-duration":"7min"
 },
 "3":{
 "id":"000003",
@@ -21,6 +25,48 @@
 "templatename":"blogg3",
 "date":"07/07.2019",
 "fb-api-key":"thisiskeynumber3",
-"subject":"seo"
+"subject":"front-end-development",
+"topic":"Front-end Development",
+"read-duration":"7min"
+},
+"4":{
+"id":"000004",
+"title":"blogg4",
+"templatename":"blogg4",
+"date":"07/08.2019",
+"fb-api-key":"thisiskeynumber4",
+"subject":"journey-of-a-new-profession",
+"topic":"Motivation/career",
+"read-duration":"7min"
+},
+"5":{
+"id":"000005",
+"title":"blogg5",
+"templatename":"blogg5",
+"date":"07.09.2019",
+"fb-api-key":"thisiskeynumber5",
+"subject":"back-end-development",
+"topic":"Back-end development ",
+"read-duration":"7min"
+},
+"6":{
+"id":"000006",
+"title":"blogg6",
+"templatename":"blogg6",
+"date":"12.09.2019",
+"fb-api-key":"thisiskeynumber6",
+"subject":"back-end-development",
+"topic":"Back-end development ",
+"read-duration":"7min"
+},
+"7":{
+"id":"000007",
+"title":"The last item",
+"templatename":"blogg7",
+"date":"23.10.2019",
+"fb-api-key":"thisiskeynumber7",
+"subject":"back-end-development",
+"topic":"Back-end development ",
+"read-duration":"7min"
 }
 }
