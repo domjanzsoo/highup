@@ -209,7 +209,7 @@ L3gradient5.addStopColor('0.8094','#902609');
 L3gradient5.addStopColor('0.914','#8A2104');
 L3element5.addGradient('L3gradient5');
 
-		let contact=new image('link','3B5E78EC2',L3,244,137,'matrix(0.24 -0.02 -0.05 0.24 396.3682 289.7041)','display:none;overflow:visible;opacity:0.67;transition:0.4s;-webkit-transition:0.4s;-moz-transition:0.4s;');
+		let contact=new image('link','3B5E78EC2',L3,244,137,'matrix(0.24 -0.02 -0.05 0.24 396.3682 289.7041)','display:none;overflow:visible;opacity:0.9;transition:0.4s;-webkit-transition:0.4s;-moz-transition:0.4s;');
 			contact.init();
 			contact.img.addEventListener('click',function(){
 			

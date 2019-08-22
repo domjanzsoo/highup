@@ -7,6 +7,7 @@
 	}
 	
 	function topicClick(e){
+	topicArea.innerHTML="";
 	let theTopic=this.id;
 	console.log(theTopic+' is clicked');
 		$.ajax({

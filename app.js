@@ -67,9 +67,9 @@ app.get('/blog/:id',function(req,res){
 		var bloggs=JSON.parse(data);
 		console.log(bloggs);
 		for(var i in bloggs){
-			console.log("Blogg with the id "+bloggs[i]['id']+" with the title: "+bloggs[i]['title'])
+			console.log("Blogg with the id "+bloggs[i]['id']+" with the title: "+bloggs[i]['title']);
 			if(bloggs[i]['id'].trim()==bloggId.trim()) {
-				console.log("Blogg found by id, having the template name :"+bloggs[i]['templatename'])
+				console.log("Blogg found by id, having the template name :"+bloggs[i]['templatename']);
 				res.render(bloggs[i]['templatename'],{layout:'blogglayout',date:bloggs[i]['date'],subject:bloggs[i]['subject'],title:bloggs[i]['title'],time:bloggs[i]['read-duration'],topic:bloggs[i]['topic']});
 		}else{
 			console.log("Not the blogg searched");
@@ -144,14 +144,14 @@ app.post('/contactmsg',[
 	
 	console.log('Contact message is processed.Message from '+fullName+' .Emails address: '+email);
 	var transporter=nodemailer.createTransport({
-		host:'mail.supaidea.com',
-		port:25,
+		host:'mail.privateemail.com',
+		port:587,
 		auth:{
-			user:'postmaster@supaidea.com',
-			pass:'Jelszo-99'
+			user:'zsolt.domjan@highup.me',
+			pass:'Jelszo99'
 		},
-		secure:false,
-		tls: {rejectUnauthorized: false},
+		secure:	false,
+		tls:{rejectUnauthorized: false}
 	});
 
 
@@ -165,7 +165,6 @@ app.post('/contactmsg',[
 		
 	/*templates.render(__dirname+'/public/emailtemplates/main/informingtemplate.html',context,function(err,html,text,subj){
 		
-
 			let mailOptionsInform={
 			from:'postmaster@supaidea.com',
 			to:'domjanzsoo@yahoo.com',
@@ -188,7 +187,7 @@ app.post('/contactmsg',[
 	
 					
 		let mailOptionsConfirm={
-		from:'postmaster@supaidea.com',
+		from:'zsolt.domjan@highup.me',
 		to:email,
 		subject:'Thank you for contacting me',
 		html:html,
@@ -196,7 +195,7 @@ app.post('/contactmsg',[
 		};
 		
 		let mailOptionsInform={
-		from:'postmaster@supaidea.com',
+		from:'zsolt.domjan@highup.me',
 		to:'domjanzsoo@yahoo.com',
 		subject:'New message received from Highup',
 		text:"Hi Zsolt,\r\n\r\n Here is a new highup message received from "+fullName+" having the email address "+email+".\r\nSee the message below:\r\n\r\n"+msg			

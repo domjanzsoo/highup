@@ -32,7 +32,7 @@
 	
 	}
 		
-	#submitbutton{
+	#submitbutt{
 	width:100px;
 	font-size:18px;
 	font-weight:bold;
@@ -54,6 +54,9 @@ color:red;
 #serverresponse{
 color:green;
 }
+.star{
+color:red;
+}
 	
 	</style>
 	</head>
@@ -64,15 +67,15 @@ color:green;
 			<form id="contactform" action="/contactmsg" method="post">
 	
 			<div class="inputgroup">
-			<label class="label">Full Name</label>
+			<label class="label">Full Name<span class="star">*</span></label>
 			<input type="text" id="fullname" class="input" name="fullname"/>
 			</div>
 			<div class="inputgroup">	
-			<label class="label">Email Address</label>
+			<label class="label">Email Address<span class="star">*</span></label>
 			<input type="text" id="email" class="input" name="email"/>
 			</div>
 			<div class="inputgroup">
-			<label class="label">Message</label>
+			<label class="label">Message<span class="star">*</span></label>
 			<textarea class="input" id="message" name="message" rows="10" cols="40"></textarea>
 			</div>
 			<input type="hidden" id="ftype" name="formtype" value="embedded" />

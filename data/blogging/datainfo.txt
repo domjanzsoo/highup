@@ -1,0 +1,4 @@
+blog topics:
+"journey-of-a-new-profession"
+"front-end-development"
+"back-end-development"

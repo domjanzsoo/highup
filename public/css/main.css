@@ -377,7 +377,7 @@ span#name{
 	display:block;
 	fill:black;
 	cursor:pointer;
-	opacity:0.2;
+	opacity:0.5;
 	transition:0.4s;
 	-webkit-transition:0.4s;
 	-moz-transition:0.4s;

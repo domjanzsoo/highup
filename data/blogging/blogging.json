@@ -1,20 +1,9 @@
 {
 "1":{
-"title":"blogg1",
-"date":"12/06.2019",
+"id":"00001",
+"title":"Beginning of web-developement journey-of-a-new-profession",
+"date":"21.08.2019",
 "fb-api-key":"thisiskeynumber1",
-"subject":"javascript"
-},
-"2":{
-"title":"blogg2",
-"date":"25/06.2019",
-"fb-api-key":"thisiskeynumber2",
-"subject":"selfdiscipline"
-},
-"3":{
-"title":"blogg2"
-"date":"07/07.2019",
-"fb-api-key":"thisiskeynumber3",
-"subject":"seo"
+"topic":"journey-of-a-new-profession"
 }
 }
