@@ -1,13 +1,16 @@
 
 {
-"1":{
-"id":"000001",
-"title":"My journey to web development",
-"templatename":"journeywebdevelopment",
-"date":"17/07/2019",
-"fb-api-key":"thisiskeynumber1",
-"subject":"journey-of-a-new-profession",
-"topic":"Motivation/career",
-"read-duration":"7min"
-}
+    "1":{
+        "id":"000001",
+        "title":"My journey to web development",
+        "templatename":"journeywebdevelopment",
+        "date":"17/07/2019",
+        "fb-api-key":"thisiskeynumber1",
+        "subject":"journey-of-a-new-profession",
+        "topic":"Motivation/career",
+        "read-duration":"7min",
+        "description":"To have a job what we love is not easy, especially if we don't even know what that desired craft is. Read my story to see all the obstacles I met in order to stay on the path of self-taught web developer.",
+        "thumbnail":"/img/blogging/journeywebdevelopment.jpg",
+        "url":"https://highup.me/blog/000001"
+        }
 }

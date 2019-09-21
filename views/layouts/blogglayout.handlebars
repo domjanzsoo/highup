@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>{{title}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content={{title}}>
+  <meta property="og:description" content={{description}}>
+  <meta property="og:image" content={{thumbnail}}>
+  <meta property="og:url" content={{url}}>
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   <link rel="stylesheet" href="/css/blogg.css" type="text/css">
@@ -18,7 +22,7 @@
 <div id="main">
 	<div id="logoabsolut">
   <a href="/"><img class="logoabsolute" src="/img/logo/fox.png" /></a>
-  	</div>
+    </div>
 
     {{{body}}}
 </div>
