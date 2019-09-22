@@ -70,7 +70,20 @@ app.get('/blog/:id',function(req,res){
 			console.log("Blogg with the id "+bloggs[i]['id']+" with the title: "+bloggs[i]['title']);
 			if(bloggs[i]['id'].trim()==bloggId.trim()) {
 				console.log("Blogg found by id, having the template name :"+bloggs[i]['templatename']);
-				res.render(bloggs[i]['templatename'],{layout:'blogglayout',date:bloggs[i]['date'],subject:bloggs[i]['subject'],title:bloggs[i]['title'],time:bloggs[i]['read-duration'],topic:bloggs[i]['topic'],desc:bloggs[i]['description'],thumbnail:bloggs[i]['thumbnail'],url:bloggs[i]['url']});
+				res.locals.metaTags={
+					date:bloggs[i]['date'],
+					subject:bloggs[i]['subject'],
+					title:bloggs[i]['title'],
+					time:bloggs[i]['read-duration'],
+					topic:bloggs[i]['topic'],
+					desc:bloggs[i]['description'],
+					thumbnail:bloggs[i]['thumbnail'],
+					url:bloggs[i]['url']
+				};
+
+				res.render(bloggs[i]['templatename'],{layout:'blogglayout'});
+
+				//.render(bloggs[i]['templatename'],{layout:'blogglayout',date:bloggs[i]['date'],subject:bloggs[i]['subject'],title:bloggs[i]['title'],time:bloggs[i]['read-duration'],topic:bloggs[i]['topic'],desc:bloggs[i]['description'],thumbnail:bloggs[i]['thumbnail'],url:bloggs[i]['url']});
 		}else{
 			console.log("Not the blogg searched");
 		}
