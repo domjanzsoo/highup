@@ -38,6 +38,12 @@ document.getElementById('internet-explorer-abilities').addEventListener('click',
 			
 		});
 
+document.getElementById('internet-explorer-about').addEventListener('click',function(){
+	
+	clicked('about');
+	
+});
+
 }else{
 
 document.getElementById('ieversion').style.display='none';	
