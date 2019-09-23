@@ -81,6 +81,7 @@ app.get('/blog/:id',function(req,res){
 					url:bloggs[i]['url']
 				};
 
+				
 				res.render(bloggs[i]['templatename'],{layout:'blogglayout', subject:bloggs[i]['subject'], title:bloggs[i]['title'], descript:bloggs[i]['subject']});
 
 				//.render(bloggs[i]['templatename'],{layout:'blogglayout',date:bloggs[i]['date'],subject:bloggs[i]['subject'],title:bloggs[i]['title'],time:bloggs[i]['read-duration'],topic:bloggs[i]['topic'],desc:bloggs[i]['description'],thumbnail:bloggs[i]['thumbnail'],url:bloggs[i]['url']});
