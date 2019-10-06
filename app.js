@@ -162,7 +162,7 @@ app.post('/contactmsg',[
 		port:587,
 		auth:{
 			user:'zsolt.domjan@highup.me',
-			pass:'Jelszo99'
+			pass:'Tyityimii12345!'
 		},
 		secure:	false,
 		tls:{rejectUnauthorized: false}
@@ -176,27 +176,7 @@ app.post('/contactmsg',[
 			message:msg,
 			
 		};
-		
-	/*templates.render(__dirname+'/public/emailtemplates/main/informingtemplate.html',context,function(err,html,text,subj){
-		
-			let mailOptionsInform={
-			from:'postmaster@supaidea.com',
-			to:'domjanzsoo@yahoo.com',
-			subject:'New message received from Highup',
-			html:html,
-			text:text			
-		};
-			transporter.sendMail(mailOptionsInform,function(error,info){
-			
-		
-		if(error){
-			console.log(error);
-		}else{
-			console.log('Email sent');
-	
-		}
-	});	
-	});	*/
+
 	templates.render(__dirname+'/public/emailtemplates/main/maintemplate.html',context,function(err,html,text,subj){
 	
 					
